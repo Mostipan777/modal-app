@@ -17,6 +17,7 @@ export interface Theme {
     text: {
       primary: string;
       secondary: string;
+      disabled: string;
     };
   };
 }

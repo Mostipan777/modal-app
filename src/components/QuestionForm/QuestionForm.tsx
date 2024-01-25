@@ -42,6 +42,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ onSuccess }) => {
           type="email"
           id="email"
           name="email"
+          placeholder="Write your email"
           value={formState.email}
           onFocus={onFocus}
           onBlur={onBlur}

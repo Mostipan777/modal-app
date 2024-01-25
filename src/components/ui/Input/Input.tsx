@@ -6,6 +6,10 @@ export const Input = styled.input<{ error?: boolean }>`
   border: 2px solid ${(props) => (props.error ? props.theme.color.danger.default : props.theme.color.text.secondary)};
   font-size: 16px;
 
+  &::placeholder {
+    color: ${(props) => props.theme.color.text.disabled};
+  },
+    
   &:focus,
   &:active {
     border-color: ${(props) => props.theme.color.primary.active};
