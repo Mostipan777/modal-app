@@ -25,7 +25,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ onSuccess }) => {
       <Box direction="column" align="center" p="48px 0" gap={24}>
         <Typography.H2>Something went wrong</Typography.H2>
         <Button onClick={handleSubmit} loading={loading}>
-          Try again
+          Try Again
         </Button>
       </Box>
     );
