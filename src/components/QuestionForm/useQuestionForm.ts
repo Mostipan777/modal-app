@@ -64,7 +64,7 @@ export const useQuestionForm = () => {
     setLoading(true);
 
     try {
-      await fakeRequest(formState);
+      await fakeRequest();
       setStatus(FormStatus.SUCCESS);
       setFormState(initialFormState);
     } catch (err) {
