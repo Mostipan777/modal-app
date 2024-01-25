@@ -4,10 +4,10 @@
 
 ## Description
 
-This repository contains a test project which focuses on demonstrating a modal window with form. Key aspects of this modal include:
+This repository contains a test project which focuses on demonstrating a modal window with a form. Key aspects of this modal include:
 
 - **Centered Modal Window**: Designed to appear in the center of the screen.
-- **Close Functionality**: Users can close the modal either by clicking on a cross icon or by pressing the escape key.
+- **Close Functionality**: Users can close the modal either by clicking on a cross icon, pressing the escape key, or by clicking outside.
 - **Form with Input Validation**:
   - **Email Field**: Validates if the input is a valid email address.
   - **Question Field**: A textarea with validation for text length being greater than zero and less than 150 characters.
