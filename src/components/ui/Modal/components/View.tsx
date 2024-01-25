@@ -45,6 +45,7 @@ const Container = styled.div`
   border-radius: 20px;
   max-height: 90%;
   width: 450px;
+  max-width: 100%;
   overflow: hidden;
   animation: ${show} 200ms ease-in-out;
 `;
