@@ -14,7 +14,7 @@ export const Modal: React.FC<ModalProps> = ({ onClose, isVisible, children }) =>
 
   if (!isVisible) return null;
 
-  const Modal = (
+  const ModalComponent = (
     <View.Backdrop onMouseDown={onClose}>
       <View.Container onMouseDown={(e) => e.stopPropagation()}>
         <View.CloseButton onClick={onClose}>✕</View.CloseButton>
@@ -23,5 +23,5 @@ export const Modal: React.FC<ModalProps> = ({ onClose, isVisible, children }) =>
     </View.Backdrop>
   );
 
-  return createPortal(Modal, document.body);
+  return createPortal(ModalComponent, document.body);
 };
