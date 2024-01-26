@@ -1,8 +1,7 @@
 export enum FormStatus {
   IDLE = 'idle',
   SUCCESS = 'success',
-  SERVER_ERROR = 'server-error',
-  VALIDATION_ERROR = 'validation-error'
+  SERVER_ERROR = 'server-error'
 }
 
 export interface FormState {

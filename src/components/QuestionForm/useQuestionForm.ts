@@ -56,7 +56,6 @@ export const useQuestionForm = () => {
 
     if (Object.values(formErrors).some((error) => error)) {
       setErrors(formErrors);
-      setStatus(FormStatus.VALIDATION_ERROR);
       return;
     }
 
@@ -65,7 +64,6 @@ export const useQuestionForm = () => {
     try {
       await fakeRequest();
       setStatus(FormStatus.SUCCESS);
-      setFormState(initialFormState);
     } catch (err) {
       setStatus(FormStatus.SERVER_ERROR);
     } finally {
