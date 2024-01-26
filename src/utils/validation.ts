@@ -1,7 +1,7 @@
 export const MIN_QUESTION_LENGTH = 1;
 export const MAX_QUESTION_LENGTH = 150;
 
-export const fieldRules: Record<string, (value: string) => string> = {
+export const validation: Record<string, (value: string) => string> = {
   email: (value: string) => {
     const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailRegExp.test(value)) {

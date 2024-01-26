@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-import { fakeRequest } from '../../utils';
+import { fakeRequest, validation } from '../../utils';
 import { FormState, FormStatus } from '../../types';
-import { fieldRules } from '../../constants';
 
 const initialFormState: FormState = {
   email: '',
@@ -21,7 +20,7 @@ export const useQuestionForm = () => {
   };
 
   const validateField = (name: string, value: string) => {
-    return fieldRules[name] ? fieldRules[name](value.trim()) : '';
+    return validation[name] ? validation[name](value.trim()) : '';
   };
 
   const onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
