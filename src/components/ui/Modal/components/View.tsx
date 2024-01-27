@@ -15,17 +15,6 @@ const Backdrop = styled.div`
   justify-content: center;
 `;
 
-const ModalContainer = styled.div`
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-`;
-
 const show = keyframes`
   0% {
     opacity: 0;
@@ -53,6 +42,12 @@ const Container = styled.div`
 const Body = styled.div`
   overflow-y: scroll;
   padding: 28px 48px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   @media (max-width: ${(props) => props.theme.breakpoint.s}) {
     padding: 24px;
@@ -83,7 +78,6 @@ const CloseButton = styled.button`
 export const View = {
   Backdrop,
   Container,
-  ModalContainer,
   Body,
   CloseButton
 };
