@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Button, Error, Form, Input, Label, Textarea, Typography } from '../ui';
+import { Box, Button, Form, Input, Textarea, Typography } from '../ui';
 import { useQuestionForm } from './useQuestionForm';
 import { FormStatus } from '../../types';
 
@@ -36,8 +36,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ onSuccess }) => {
       <Box p="12px 0 20px" justify="center">
         <Typography.H2>Contact Us</Typography.H2>
       </Box>
-      <Box direction="column">
-        <Label htmlFor="email">Email</Label>
+      <Form.Item label="Email" htmlFor="email" error={errors.email}>
         <Input
           type="email"
           id="email"
@@ -49,10 +48,8 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ onSuccess }) => {
           onChange={handleInputChange}
           error={!!errors.email}
         />
-        <Error>{errors.email}</Error>
-      </Box>
-      <Box direction="column">
-        <Label htmlFor="question">Question</Label>
+      </Form.Item>
+      <Form.Item label="Question" htmlFor="question" error={errors.question}>
         <Textarea
           id="question"
           name="question"
@@ -62,8 +59,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ onSuccess }) => {
           onChange={handleInputChange}
           error={!!errors.question}
         />
-        <Error>{errors.question}</Error>
-      </Box>
+      </Form.Item>
 
       <Box justify="center">
         <Button type="submit" loading={loading}>
