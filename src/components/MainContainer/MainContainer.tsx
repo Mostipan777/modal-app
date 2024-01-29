@@ -9,8 +9,10 @@ export const MainContainer: React.FC = () => {
 
   return (
     <AppLayout>
-      <Button onClick={openModal}>Open modal</Button>
-      <Modal isVisible={isModalOpen} onClose={closeModal}>
+      <Button onClick={openModal} aria-controls="question-modal">
+        Open modal
+      </Button>
+      <Modal isVisible={isModalOpen} onClose={closeModal} aria-label="Question Form Modal" id="question-modal">
         <QuestionForm onSuccess={closeModal} />
       </Modal>
     </AppLayout>
