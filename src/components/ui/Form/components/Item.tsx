@@ -15,7 +15,7 @@ export const Item: React.FC<ItemProps> = ({ children, error, label, ...props }) 
     <Box direction="column">
       <Label {...props}>{label}</Label>
       {children}
-      <Error>{error}</Error>
+      <Error>{error || ''}</Error>
     </Box>
   );
 };
