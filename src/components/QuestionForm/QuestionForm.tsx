@@ -53,6 +53,7 @@ export const QuestionForm: React.FC<QuestionFormProps> = ({ onSuccess }) => {
         <Textarea
           id="question"
           name="question"
+          placeholder="Write your question"
           value={formState.question}
           onFocus={onFocus}
           onBlur={onBlur}

@@ -8,6 +8,12 @@ export const Textarea = styled.textarea<{ error?: boolean }>`
   min-height: 75px;
   max-height: 200px;
   resize: vertical;
+  font-family: inherit;
+  letter-spacing: inherit;
+
+  &::placeholder {
+    color: ${(props) => props.theme.color.text.disabled};
+  }
 
   &:focus,
   &:active {
